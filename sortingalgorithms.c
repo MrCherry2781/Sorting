@@ -28,11 +28,19 @@ void insertionSort(Record *arr, int n)
 void selectionSort(Record *arr, int n)
 {
     // TODO: Implement this sorting algorithm here.
-
-
-
-
-
+    int i, j, minimum_idx;
+    for (i = 0; i < n - 1; i++) {
+        minimum_idx = i;
+        for (j = i + 1; j < n; j++) {
+            if (arr[j].idNumber < arr[minimum_idx].idNumber) {
+                minimum_idx = j;
+            }
+        }
+        // Swap the minimum element with the first element
+        Record temp = arr[minimum_idx];
+        arr[minimum_idx] = arr[i];
+        arr[i] = temp;
+    }
 
 }
 
