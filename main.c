@@ -11,7 +11,7 @@ int main()
     int n;
 	
 	// Provide the file path to read
-	char filePath[500]="C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/data/almostsorted.txt";
+	char filePath[500]="C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/data/totallyreversed.txt";
 	// Provide the file path to output
 	char outputPath[500] = "C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/output.txt";
 	
