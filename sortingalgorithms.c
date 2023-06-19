@@ -9,6 +9,26 @@
 * as needed by the sorting algorithms here.
 */
 
+void getNumOfRecs(char path[500], int *n){
+	FILE *fp;
+    fp = fopen(path, "r");
+    fscanf(fp, "%d", n);
+}
+
+// Helper Function that print records to a file for testing
+void printRecords(Record *records, int n, char outputPath[500]) {
+    FILE *fp = fopen(outputPath, "w");
+    if (fp == NULL) {
+        printf("Error opening output file.\n");
+        return;
+    }
+
+    for (int i = 0; i < n; i++) {
+        fprintf(fp, "%d %s\n", records[i].idNumber, records[i].name);
+    }
+
+    fclose(fp);
+}
 
 
 
@@ -17,12 +37,17 @@
 void insertionSort(Record *arr, int n)
 {
     // TODO: Implement this sorting algorithm here.
-
-
-
-
-
-
+    Record key;
+    int i,j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j].idNumber > key.idNumber) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
 }
 
 
