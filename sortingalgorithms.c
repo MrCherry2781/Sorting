@@ -25,6 +25,7 @@ void insertionSort(Record *arr, int n)
 
 }
 
+
 void selectionSort(Record *arr, int n)
 {
     int i, j, minimum_idx;
