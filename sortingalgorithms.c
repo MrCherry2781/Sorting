@@ -27,7 +27,6 @@ void insertionSort(Record *arr, int n)
 
 void selectionSort(Record *arr, int n)
 {
-    // TODO: Implement this sorting algorithm here.
     int i, j, minimum_idx;
     for (i = 0; i < n - 1; i++) {
         minimum_idx = i;
