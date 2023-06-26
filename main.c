@@ -11,7 +11,7 @@ int main()
     int n;
 	
 	// Provide the file path to read
-	char filePath[500]="C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/data/totallyreversed.txt";
+	char filePath[500]="C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/data/random100.txt";
 	// Provide the file path to output
 	char outputPath[500] = "C:/Users/Kristian/Desktop/CCDSALG/starter_code_c/output.txt";
 	
@@ -26,11 +26,13 @@ int main()
     // Sort the records based on ID numbers
     // Get execution time
     long startTime, endTime, executionTime;
-	startTime = currentTimeMillis(); // store the current time
-	selectionSort(records, n); // CALL THE ALGORITHM HERE
-	endTime = currentTimeMillis(); // store the current time
-	executionTime = endTime - startTime;
+	startTime = currentTimeMillis();// store the current time
+
+	bucketSort(records,n);// CALL THE ALGORITHM HERE
 	
+    endTime = currentTimeMillis(); // store the current time
+	executionTime = endTime - startTime;
+
     // Print the sorted contents of the records array for testing
     printRecords(records, n, outputPath);
     

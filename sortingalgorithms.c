@@ -2,6 +2,7 @@
 #define SORTINGALGORITHMS_C
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "record.c"
 
 
@@ -26,10 +27,6 @@ void printRecords(Record *records, int n, char outputPath[500]) {
     fclose(fp);
 }
 
-
-
-
-
 void insertionSort(Record *arr, int n)
 {
     Record key;
@@ -45,11 +42,11 @@ void insertionSort(Record *arr, int n)
     }
 }
 
-
 void selectionSort(Record *arr, int n)
 {
     int i, j, minimum_idx;
     for (i = 0; i < n - 1; i++) {
+        minimum_idx= i;
         for (j = i + 1; j < n; j++) {
             if (arr[j].idNumber < arr[minimum_idx].idNumber) {
                 minimum_idx = j;
